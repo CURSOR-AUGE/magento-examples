@@ -12,7 +12,7 @@
 ## Main Functionalities
 example for Controller - Block - View
 
-URL: http://localhost/frontname/Sectionindex/Actionindex
+URL: http://localhost/frontname/sectionindex/sctionindex
 
 ## Installation
 \* = in production please use the `--keep-generated` option
