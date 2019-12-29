@@ -5,7 +5,7 @@ namespace Example\ModuleName\Helper;
 class Data extends \Magento\Framework\App\Helper\AbstractHelper {
 
 	/**
-	 * Returns rand CSS color
+	 * Returns rand CSS colors
 	 * @return string
 	 */
 	public function getColor() {
