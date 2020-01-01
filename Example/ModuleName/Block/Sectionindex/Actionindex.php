@@ -18,4 +18,11 @@ class Actionindex extends \Magento\Framework\View\Element\Template
     ) {
         parent::__construct($context, $data);
     }
+
+    /**
+     * Get getIndexUrl
+     */
+    public function getIndexUrl() {
+        return $this->getUrl('frontname/sectionindex/actionindex');
+    }
 }
