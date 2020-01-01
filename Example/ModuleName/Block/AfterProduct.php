@@ -11,6 +11,22 @@ class AfterProduct extends \Magento\Catalog\Block\Product\View\AbstractView
     protected $_dataHelper;
 
     /**
+     * @param \Magento\Catalog\Block\Product\Context $context
+     * @param \Magento\Framework\Stdlib\ArrayUtils $arrayUtils
+     * @param array $data
+     * @param \Example\ModuleName\Helper\Data $dataHelper
+     */
+    public function __construct(
+        \Magento\Catalog\Block\Product\Context $context,
+        \Magento\Framework\Stdlib\ArrayUtils $arrayUtils,
+        array $data,
+        \Example\ModuleName\Helper\Data $dataHelper
+    ) {
+        parent::__construct($context, $arrayUtils, $data);
+
+        $this->_dataHelper = $dataHelper;
+    }
+    /**
      * Get the name of the current product
      * @return string
      */
@@ -23,7 +39,6 @@ class AfterProduct extends \Magento\Catalog\Block\Product\View\AbstractView
      * @return string
      */
     public function getColor() {
-        return 'xxx';
         return $this->_dataHelper->getColor();
     }
 }
