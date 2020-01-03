@@ -13,7 +13,6 @@ class View extends \Magento\Catalog\Block\Product\View
      */
     public function getProduct()
     {
-        print_r('rxxxxxxxxxxxxxxxxxxxxxxxxxxx');die();
         if (!$this->_coreRegistry->registry('product') && $this->getProductId()) {
             $product = $this->productRepository->getById($this->getProductId());
             $this->_coreRegistry->register('product', $product);
