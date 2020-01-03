@@ -16,12 +16,17 @@ class Actionindex extends \Magento\Framework\App\Action\Action
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $resultPageFactory
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory,
+        \Magento\Customer\Model\Customer $customers
     ) {
         $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
-
+    public function getCustomerCollection($customers) {
+        return $customers->getCollection()
+            ->addAttributeToSelect("*")
+            ->load();
+    }
     /**
      * Execute view action
      *
