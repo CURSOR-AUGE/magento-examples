@@ -4,15 +4,15 @@ $attributeCode = 'manufacturer';
 $entityType = 'catalog_product';
 
 $attributeInfo = $block->getAttributeInfo($entityType, $attributeCode);
-//var_dump($attributeInfo->getData());
+#var_dump($attributeInfo->getData());
 
 $attributeId = $attributeInfo->getAttributeId();
 $optionId = 49; // YOUR_OPTION_ID
 
 $attributeOptionAll = $block->getAttributeOptionAll($attributeId);
-//var_dump($attributeOptionAll->getData());
+#var_dump($attributeOptionAll->getData());
 
-$attributeOptionSingle = $block->getAttributeOptionSingle($attributeId, $optionId);
+#$attributeOptionSingle = $block->getAttributeOptionSingle($attributeId, $optionId);
 //var_dump($attributeOptionSingle->getData());
 ?>
 <h2>EAV</h2>
